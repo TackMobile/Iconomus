@@ -24,7 +24,7 @@ class IconsController < ApplicationController
         # Write zip to temp file
         Tempfile.open(['icon-', '.zip']) do |f|
           file = agent.get("http://thenounproject.com/download/zipped/svg_#{icon_id}.zip")
-          IO.binwrite(f.path, file.body)
+          File.open(f.path, 'wb') {|f| f.write(file.body) }
           
           # Extract SVG from zip file
           ::Zip::ZipFile.open(f.path) do |zipfile|
