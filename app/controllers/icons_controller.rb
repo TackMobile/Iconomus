@@ -1,11 +1,13 @@
-require 'tempfile'
-
 class IconsController < ApplicationController
-  
   def show
+    # Set encoding
+    Encoding.default_external = Encoding::BINARY
+    
     # Split parameter into the name and id
-    name, icon_index = params[:id].split(/-/)
-    icon_index = icon_index.to_i
+    arr = params[:id].split(/-/)
+    icon_index = 0
+    icon_index = arr.pop().to_i if arr.length > 1 && arr.last.index(/^\d+$/)
+    name = arr.join('-')
     
     # Setup a place to store the SVG data
     svg_data = nil
@@ -40,7 +42,7 @@ class IconsController < ApplicationController
     
     # If we couldn't find the SVG data then return a 404
     if svg_data.nil?
-      render :status => 404, :text => error_message
+      render :status => 404
     
     # Otherwise return the SVG
     else
