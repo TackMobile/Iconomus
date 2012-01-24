@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: doubloon
+  pool: 5
+  username: doubloon
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: doubloon_test
+  pool: 5
+  username: doubloon
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: doubloon
+  pool: 5
+  username: doubloon
+  password:
