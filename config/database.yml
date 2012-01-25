@@ -1,23 +1,23 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: doubloon
+  database: iconomus
   pool: 5
-  username: doubloon
+  username: iconomus
   password:
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: doubloon_test
+  database: iconomus_test
   pool: 5
-  username: doubloon
+  username: iconomus
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: doubloon
+  database: iconomus
   pool: 5
-  username: doubloon
+  username: iconomus
   password:

@@ -1,4 +1,4 @@
-# Doubloon
+# Iconomus
 
 ## Setup
 
@@ -8,16 +8,16 @@ The following is the setup process for the Rails 3.2 project:
 
 Use the following commands to setup your Postgres database:
 
-    $ createuser --superuser doubloon
-    $ createdb -U doubloon doubloon
-    $ createdb -U doubloon doubloon_test
+    $ createuser --superuser iconomus
+    $ createdb -U iconomus iconomus
+    $ createdb -U iconomus iconomus_test
     $ rake db:create
     $ rake db:migrate
     $ rake db:test:prepare
 
 ## Tests
 
-Doubloon uses RSpec for tests.
+Iconomus uses RSpec for tests.
 
     $ rake test
 

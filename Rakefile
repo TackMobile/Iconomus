@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Doubloon::Application.load_tasks
+Iconomus::Application.load_tasks
