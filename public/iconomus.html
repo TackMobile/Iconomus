@@ -15,17 +15,21 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/application.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    
+    <script src="js/prettify.js"></script>
   </head>
 
-  <body>
+  <body onload="prettyPrint()">
   
-      <div class="navbar navbar-fixed">
+      <!--<div class="navbar navbar-fixed">
         <div class="navbar-inner">
           <div class="container">
             <a class="brand" href="#">Iconomus</a>
@@ -36,42 +40,40 @@
             </ul>
           </div>
         </div>
+      </div>-->
+  
+  <div class="container">
+  
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit">
+      <h1 class="big">Iconomus</h1>
+      <p>Placeholder icons in a jiffy (that's fast).</p>
+    </div>
+  
+    <div class="span8 tryit">
+      <input type="text" name="" value="iconom.us/tshirt/16x16/f00/90deg/svg" class="span7 xlarge" />
+      <button class="btn large primary">Try it!</button>
+    </div>
+    
+    <div class="row">
+      <div class="span4">
+        <h2>What's this for?</h2>
+        <p>Iconomus generates placeholder icons based on attributes you provide. So far, you can specify:</p>
+        <p><span class="label">color</span> <span class="label">opacity</span> <span class="label">rotation</span> <span class="label">size</span> <span class="label">format</span>
       </div>
+      <div class="span4">
+        <h2>How do I use it?</h2>
+        <p>It's easy! All you have to do is provide an iconom.us URL with the attributes you want in your HTML or CSS. Like so:</p>
+        <p class="example1"><code class="prettyprint language-html">http://iconom.us/tshirt/30x30/F00/</code></pre></p>
+      </div>
+    </div>
+    
+    <footer>
+      <p>Built with loving tenderness by <a href="http://twitter.com/benbjohnson">Ben Johnson</a> and <a href="http://twitter.com/tackmobile.com">Tack Mobile</a>. The icons are from <a href="http://www.thenounproject.com">The Noun Project</a>.</p>
+    </footer>
   
-      <div class="container">
+  </div> <!-- /container -->
   
-        <!-- Main hero unit for a primary marketing message or call to action -->
-        <div class="hero-unit">
-          <h1>Let Iconomus make placeholder icons for you.</h1>
-          <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-          <p><a class="btn primary large">Learn more &raquo;</a></p>
-        </div>
-  
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="span4">
-            <h2>Heading</h2>
-             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn" href="#">View details &raquo;</a></p>
-          </div>
-          <div class="span4">
-            <h2>Heading</h2>
-             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn" href="#">View details &raquo;</a></p>
-         </div>
-          <div class="span4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn" href="#">View details &raquo;</a></p>
-          </div>
-        </div>
-  
-        <footer>
-          <p>&copy;2012 Tack Mobile LLC</p>
-        </footer>
-  
-      </div> <!-- /container -->
-  
-    </body>
+  </body>
     
 </html>
