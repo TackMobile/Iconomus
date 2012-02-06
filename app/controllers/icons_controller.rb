@@ -120,7 +120,12 @@ class IconsController < ApplicationController
 
   # Changes the size of the SVG drawing.
   def set_svg_size(xml, width, height)
-    #orig_width = xml.
+    # Save original dimension and calculate percent change.
+    orig = {width:xml.root['width'].to_f, height:xml.root['height'].to_f}
+    delta = {width:width.to_f/orig[:width], height:height.to_f/orig[:height]}
+    
+    # Set new width & height.
+    xml.root['width'] = "#{width}px"
+    xml.root['height'] = "#{height}px"
   end
-  
 end
