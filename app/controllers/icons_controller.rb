@@ -5,7 +5,6 @@ class IconsController < ApplicationController
     
     # Split parameter into the name and id
     options = parse_options(params[:id])
-    p "OPTIONS: #{options}"
     
     # Setup a place to store the SVG data
     svg_data = nil
@@ -123,6 +122,11 @@ class IconsController < ApplicationController
   # Changes the fill color of the SVG drawing.
   def set_svg_fill_color(xml, color)
     xml.root['style'] = "fill:##{color}"
+    
+    # Strip existing fills.
+    xml.root.children.each do |child|
+      child['fill'] = ''
+    end
   end
 
   # Changes the size of the SVG drawing.
