@@ -1,4 +1,4 @@
 Iconomus::Application.routes.draw do
-  resources :icons, :only => [:show]
   root :to => "home#index"
+  match ":id" => 'icons#show'
 end
