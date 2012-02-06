@@ -77,6 +77,9 @@ class IconsController < ApplicationController
     
     # The first option is always the name of the icon.
     options[:name] = items.shift()
+    while items.length > 0 && items.first.index(/^[a-z]+$/) && !is_color?(items.first)
+      options[:name] = "#{options[:name]}-#{items.shift()}"
+    end
     options[:name].gsub!(/_/, '-')
     
     # The second option is the index if it is a single integer.
@@ -108,6 +111,10 @@ class IconsController < ApplicationController
     return options
   end
 
+  def is_color?(str)
+    return !str.index(/^[0-9a-f]{3}$/).nil? || !str.index(/^[0-9a-f]{6}$/).nil?
+  end
+  
 
   ######################################
   # SVG
