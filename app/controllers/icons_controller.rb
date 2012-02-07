@@ -1,3 +1,5 @@
+require 'RMagick'
+
 class IconsController < ApplicationController
   def show
     # Set encoding
