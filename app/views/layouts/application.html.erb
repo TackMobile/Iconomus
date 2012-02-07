@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Iconomus</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Iconomus: Placeholder icons in a jiffy.</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<%= yield %>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-</body>
+    <!-- Le styles -->
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+
+    <link href='http://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body onload="prettyPrint()">
+  
+  <div class="container">
+    <%= yield %>
+
+    <footer>
+      <p>Built with loving tenderness by <a href="http://twitter.com/benbjohnson">Ben Johnson</a> and <a href="http://tackmobile.com">Tack Mobile</a>. The icons are from <a href="http://www.thenounproject.com">The Noun Project</a>.</p>
+    </footer>
+  </div> <!-- /container -->
+  </body>
 </html>
