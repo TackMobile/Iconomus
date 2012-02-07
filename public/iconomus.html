@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Iconomus: Make placeholder icons for in a jiffy.</title>
+    <title>Iconomus: Placeholder icons in a jiffy.</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -13,34 +13,14 @@
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/application.css" rel="stylesheet">
     <link href="css/prettify.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
     
     <script src="js/prettify.js"></script>
   </head>
 
   <body onload="prettyPrint()">
-  
-      <!--<div class="navbar navbar-fixed">
-        <div class="navbar-inner">
-          <div class="container">
-            <a class="brand" href="#">Iconomus</a>
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>-->
   
   <div class="container">
   
@@ -50,21 +30,58 @@
       <p>Placeholder icons in a jiffy (that's fast).</p>
     </div>
   
-    <div class="span8 tryit">
-      <input type="text" name="" value="iconom.us/tshirt/16x16/f00/90deg/svg" class="span7 xlarge" />
-      <button class="btn large primary">Try it!</button>
-    </div>
-    
-    <div class="row">
+    <div class="row intro">
       <div class="span4">
-        <h2>What's this for?</h2>
+        <h2>What is this?</h2>
         <p>Iconomus generates placeholder icons based on attributes you provide. So far, you can specify:</p>
-        <p><span class="label">color</span> <span class="label">opacity</span> <span class="label">rotation</span> <span class="label">size</span> <span class="label">format</span>
+        <p><span class="label">icon</span> <span class="label">color</span> <span class="label">opacity</span> <span class="label">rotation</span> <span class="label">size</span> <span class="label">format</span></p>
       </div>
       <div class="span4">
         <h2>How do I use it?</h2>
-        <p>It's easy! All you have to do is provide an iconom.us URL with the attributes you want in your HTML or CSS. Like so:</p>
-        <p class="example1"><code class="prettyprint language-html">http://iconom.us/tshirt/30x30/F00/</code></pre></p>
+        <p>It's easy! All you have to do is provide an iconom.us URL with the icon attributes you want.</p>
+        <p>You can use the icons in your HTML or CSS. Check out the examples below, won't you?</p>
+      </div>
+    </div>
+    
+    <div class="examples">
+      <div class="row">
+        <h1 class="span3">Examples</h1>
+        <p class="span5 noun">Check out <a href="http://thenounproject.com">The Noun Project</a> to see what icons are available.</p>
+      </div>
+      
+      <div class="example">
+        <div class="row block">
+          <div class="span2">
+            <embed src="http://iconom.us/beer-62abcd-30x30.svg" type="image/svg+xml"/>
+          </div>
+          <div class="span6">
+            <textarea class="code code-one">http://iconom.us/beer-62abcd-30x30.svg</textarea>
+          </div>
+        </div>
+      </div>
+      
+      <div class="example">
+        <div class="row block">
+          <div class="span2">
+            <embed src="http://iconom.us/glasses-f00-100x100.svg" type="image/svg+xml"/>
+          </div>
+          <div class="span6">
+            <textarea class="code code-two">.glasses {
+  background-image: url(http://iconom.us/glasses-f00-100x100.svg);
+}</textarea>
+          </div>
+        </div>
+      </div>
+      
+      <div class="example">
+        <div class="row block">
+          <div class="span2">
+            <embed src="http://iconom.us/ninja-3f6-60x60.svg" type="image/svg+xml"/>
+          </div>
+          <div class="span6">
+            <textarea class="code code-three"><img src="http://iconom.us/ninja-3f6-60x60.svg"/></textarea>
+          </div>
+        </div>
       </div>
     </div>
     

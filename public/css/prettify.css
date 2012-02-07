@@ -7,12 +7,12 @@
 .typ, .atn, .dec, .var { color: #CB4B16; }
 .pln { color: #93a1a1; }
 .prettyprint {
-  background-color: #fefbf3;
+  /*background-color: #fefbf3;
   padding: 9px;
   border: 1px solid rgba(0,0,0,.2);
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
      -moz-box-shadow: 0 1px 2px rgba(0,0,0,.1);
-          box-shadow: 0 1px 2px rgba(0,0,0,.1);
+          box-shadow: 0 1px 2px rgba(0,0,0,.1);*/
 }
 
 /* Specify class=linenums on a pre to get line numbering */
@@ -71,7 +71,7 @@ $green:     #859900;
 /* ---------- */
 
 .prettyprint-dark {
-  background-color: #1d1f21;
+/*  background-color: #1d1f21;*/
   border: 0;
   padding: 10px;
 }
@@ -79,7 +79,7 @@ $green:     #859900;
   color: #444;
 }
 .prettyprint-dark .linenums li:hover {
-  background-color: #282a2e;
+/*  background-color: #282a2e;*/
 }
 /* tags in html */
 .prettyprint-dark .kwd,
