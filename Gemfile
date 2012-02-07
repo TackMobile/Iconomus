@@ -6,6 +6,7 @@ gem 'pg', '~> 0.12.2'
 gem 'mechanize', '~> 2.1'
 gem 'rubyzip', '~> 0.9.5', :require => 'zip/zip'
 gem 'thin', '~> 1.3.1'
+gem 'rmagick', '~> 2.13.1'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -53,9 +53,29 @@ class IconsController < ApplicationController
         set_svg_size(svg_data, options[:width], options[:height])
       end
       
-      # Output SVG.
+      # Default format to PNG
+      params[:format] = "png" if params[:format].blank?
+
+      # Send SVG as plain text.
       if params[:format] == 'svg'
-        render :text => svg_data.to_s
+        send_data svg_data.to_s, :filename => "#{options[:name]}.svg",
+          :disposition => 'inline', :type => 'image/svg+xml'
+      
+      # Rasterize image data through RMagick first before sending.
+      else
+        image = Magick::Image.from_blob(svg_data.to_s) {|info| info.format = 'svg'}.first
+        
+        if params[:format] == 'jpg'
+          send_data image.to_blob {|info| info.format = 'jpg'},
+            :filename => "#{options[:name]}.jpg",
+            :disposition => 'inline', :type => 'image/jpg'
+        elsif params[:format] == 'png'
+          send_data image.to_blob {|info| info.format = 'png'},
+            :filename => "#{options[:name]}.png",
+            :disposition => 'inline', :type => 'image/png'
+        else
+          render :text => '', :status => 422
+        end
       end
     end
   end
@@ -121,11 +141,14 @@ class IconsController < ApplicationController
   
   # Changes the fill color of the SVG drawing.
   def set_svg_fill_color(xml, color)
-    xml.root['style'] = "fill:##{color}"
+    # Find all primitives.
+    primitives = ['path', 'circle', 'rect', 'line', 'ellipse', 'polyline', 'polygon', 'text']
     
     # Strip existing fills.
-    xml.root.children.each do |child|
-      child['fill'] = ''
+    primitives.each do |primitive|
+      xml.xpath("//xmlns:#{primitive}").each do |child|
+        child['fill'] = "##{color}"
+      end
     end
   end
 
