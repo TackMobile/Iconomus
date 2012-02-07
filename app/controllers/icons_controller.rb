@@ -157,6 +157,14 @@ class IconsController < ApplicationController
     # Save original dimension and calculate percent change.
     orig = {width:xml.root['width'].to_f, height:xml.root['height'].to_f}
     delta = {width:width.to_f/orig[:width], height:height.to_f/orig[:height]}
+    aspect_ratio = orig[:width]/orig[:height]
+    
+    # Restrict width and height to aspect ratio.
+    if width/height > aspect_ratio
+      width = height * aspect_ratio
+    else
+      height = width / aspect_ratio
+    end
     
     # Set new width & height.
     xml.root['width'] = "#{width}px"
