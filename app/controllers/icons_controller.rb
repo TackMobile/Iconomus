@@ -55,6 +55,9 @@ class IconsController < ApplicationController
         set_svg_size(svg_data, options[:width], options[:height])
       end
       
+      # Set cache control.
+      response.headers['Cache-Control'] = 'public, max-age=86400'
+      
       # Default format to PNG
       params[:format] = "png" if params[:format].blank?
 
