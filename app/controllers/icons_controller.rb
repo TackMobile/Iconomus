@@ -63,7 +63,7 @@ class IconsController < ApplicationController
       
       # Rasterize image data through RMagick first before sending.
       else
-        image = Magick::Image.from_blob(svg_data.to_s) {|info| info.format = 'svg'}.first
+        image = ::Magick::Image.from_blob(svg_data.to_s) {|info| info.format = 'svg'}.first
         
         if params[:format] == 'jpg'
           send_data image.to_blob {|info| info.format = 'jpg'},
