@@ -51,9 +51,16 @@ h1.big {
   height: 70px;
 }
 
+.glasses {
+  background-image: url(http://iconom.us/glasses-100x100.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
 .code-three {
   width: 100%;
-  height: 30px;
+  height: 70px;
 }
 
 .noun {
